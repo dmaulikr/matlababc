@@ -1,0 +1,14 @@
+%
+%
+%
+cle
+
+x = 1:0.01:2;
+y = 0:0.01:2;
+[X,Y]=meshgrid(x,y);
+
+w = exp(-25*(X-1.5).^2-5*(Y-1).^2);
+
+for t=0.01:0.01:1
+    sol=w./r.*cos(5*t-2*r);pcolor(X,Y,sol), shading interp
+end
